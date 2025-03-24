@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F1775ACF-5FE4-4EC8-BE75-8A77C1F960A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MCNWSiteGen</RootNamespace>
+    <AssemblyName>MCNWSiteGen</AssemblyName>
+    <ApplicationIcon>MCNWSiteGen.ico</ApplicationIcon>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\MCNWSiteGen.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+    <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\MCNWSiteGen.exe.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisRuleDirectories>;C:\Program Files\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MC3ListView, Version=1.6.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Shared\MC3ListView.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MercuryAVTPLCRegisterConfig.cs" />
+    <Compile Include="MercuryAVTPLCRegisterConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryAVTPLCRegisterConfigForm.Designer.cs">
+      <DependentUpon>MercuryAVTPLCRegisterConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercuryGUIOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryGUIOptionsForm.Designer.cs">
+      <DependentUpon>MercuryGUIOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercuryGUIOptions.cs" />
+    <Compile Include="MercuryAVTPLCRecallFormOptions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryAVTPLCRecallFormOptions.Designer.cs">
+      <DependentUpon>MercuryAVTPLCRecallFormOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercuryAVTPLCWaterOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryAVTPLCWaterOptionsForm.Designer.cs">
+      <DependentUpon>MercuryAVTPLCWaterOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DefineAndConst.cs" />
+    <Compile Include="ClientDataPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientDataPath.Designer.cs">
+      <DependentUpon>ClientDataPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutoZeroConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoZeroConfiguration.Designer.cs">
+      <DependentUpon>FormAutoZeroConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSweepPCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSweepPCU.Designer.cs">
+      <DependentUpon>FormSweepPCU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWaterPCU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWaterPCU.Designer.cs" />
+    <Compile Include="FormWebConfigWizard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWebConfigWizard.Designer.cs">
+      <DependentUpon>FormWebConfigWizard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ImpositionImport\CMCImpositionBroadsheet.cs" />
+    <Compile Include="ImpositionImport\CMCImpositionFormerWebPath.cs" />
+    <Compile Include="ImpositionImport\CMCImpositionInker.cs" />
+    <Compile Include="ImpositionImport\CMCImpositionPlate.cs" />
+    <Compile Include="ImpositionImport\CMCImpositionPressConstructor.cs" />
+    <Compile Include="ImpositionImport\CMCImpositionPressConstructorWeb.cs" />
+    <Compile Include="ImpositionImport\CMCImpositionUnit.cs" />
+    <Compile Include="ImpositionImport\ImpositionImport_API.cs" />
+    <Compile Include="ImpositionImport\TowerCIP3SectionConversion.cs" />
+    <Compile Include="MercuryAVTPLCConfig.cs" />
+    <Compile Include="MercuryAVTPLCInkerOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryAVTPLCInkerOptionsForm.Designer.cs">
+      <DependentUpon>MercuryAVTPLCInkerOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercuryAVTPLCVoltagesConfig.cs" />
+    <Compile Include="MercuryAVTPLCConfigVoltagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryAVTPLCConfigVoltagesForm.Designer.cs">
+      <DependentUpon>MercuryAVTPLCConfigVoltagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercuryAVTPLCSweepConfig.cs" />
+    <Compile Include="MercuryAVTPLCWaterConfig.cs" />
+    <Compile Include="MercuryServerOptions.cs" />
+    <Compile Include="MercuryAVTPLCConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryAVTPLCConfigForm.Designer.cs">
+      <DependentUpon>MercuryAVTPLCConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MercuryServerOptionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MercuryServerOptionsForm.Designer.cs">
+      <DependentUpon>MercuryServerOptionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCwater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLCwater.Designer.cs">
+      <DependentUpon>PLCwater.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ServerDataPath.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ServerDataPath.Designer.cs">
+      <DependentUpon>ServerDataPath.cs</DependentUpon>
+    </Compile>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutoScanCal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoScanCal.Designer.cs">
+      <DependentUpon>FormAutoScanCal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDataStorage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDataStorage.Designer.cs">
+      <DependentUpon>FormDataStorage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSweepMotorServo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSweepMotorServo.Designer.cs">
+      <DependentUpon>FormSweepMotorServo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSweepMotorOrServoCtrl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSweepMotorOrServoCtrl.Designer.cs">
+      <DependentUpon>FormSweepMotorOrServoCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWaterInterface.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWaterInterface.Designer.cs">
+      <DependentUpon>FormWaterInterface.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWaterMotorOrServo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWaterMotorOrServo.Designer.cs">
+      <DependentUpon>FormWaterMotorOrServo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWaterMotorServo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWaterMotorServo.Designer.cs">
+      <DependentUpon>FormWaterMotorServo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPressSiteSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPressSiteSettings.Designer.cs">
+      <DependentUpon>frmPressSiteSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSiteConfigGen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSiteConfigGen.Designer.cs">
+      <DependentUpon>frmSiteConfigGen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOCUSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOCUSettings.Designer.cs">
+      <DependentUpon>frmOCUSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSingleInput.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSingleInput.Designer.cs">
+      <DependentUpon>frmSingleInput.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSPUConfiguration.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSPUConfiguration.Designer.cs">
+      <DependentUpon>frmSPUConfiguration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmUtilityTestSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUtilityTestSettings.designer.cs">
+      <DependentUpon>frmUtilityTestSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MCSiteConfigData.cs" />
+    <Compile Include="NFSTables.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NFSTables.Designer.cs">
+      <DependentUpon>NFSTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PLCSweep.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PLCSweep.Designer.cs">
+      <DependentUpon>PLCSweep.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PressInformation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PressInformation.Designer.cs">
+      <DependentUpon>PressInformation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PressInterfaceFeatures.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PressInterfaceFeatures.Designer.cs">
+      <DependentUpon>PressInterfaceFeatures.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientDataPath.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ClientDataPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryAVTPLCRegisterConfigForm.resx">
+      <DependentUpon>MercuryAVTPLCRegisterConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryGUIOptionsForm.resx">
+      <DependentUpon>MercuryGUIOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryAVTPLCRecallFormOptions.resx">
+      <DependentUpon>MercuryAVTPLCRecallFormOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryAVTPLCWaterOptionsForm.resx">
+      <DependentUpon>MercuryAVTPLCWaterOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoZeroConfiguration.resx">
+      <DependentUpon>FormAutoZeroConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSweepPCU.resx">
+      <DependentUpon>FormSweepPCU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWaterPCU.resx" />
+    <EmbeddedResource Include="FormWebConfigWizard.resx">
+      <DependentUpon>FormWebConfigWizard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCwater.resx">
+      <DependentUpon>PLCwater.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryAVTPLCConfigForm.resx">
+      <DependentUpon>MercuryAVTPLCConfigForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryAVTPLCConfigVoltagesForm.resx">
+      <DependentUpon>MercuryAVTPLCConfigVoltagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryAVTPLCInkerOptionsForm.resx">
+      <DependentUpon>MercuryAVTPLCInkerOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MercuryServerOptionsForm.resx">
+      <DependentUpon>MercuryServerOptionsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ServerDataPath.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ServerDataPath.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoScanCal.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormAutoScanCal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDataStorage.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormDataStorage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSweepMotorServo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormSweepMotorServo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSweepMotorOrServoCtrl.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormSweepMotorOrServoCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWaterInterface.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormWaterInterface.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWaterMotorOrServo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormWaterMotorOrServo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWaterMotorServo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FormWaterMotorServo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPressSiteSettings.resx">
+      <DependentUpon>frmPressSiteSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSiteConfigGen.resx">
+      <DependentUpon>frmSiteConfigGen.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOCUSettings.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmOCUSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSingleInput.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSingleInput.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSPUConfiguration.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmSPUConfiguration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmUtilityTestSettings.resx">
+      <DependentUpon>frmUtilityTestSettings.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NFSTables.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>NFSTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PLCSweep.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PLCSweep.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PressInformation.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PressInformation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PressInterfaceFeatures.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>PressInterfaceFeatures.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SiteInfo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SiteInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SweepInterfaces.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>SweepInterfaces.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Turnbars.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Turnbars.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SiteInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SiteInfo.Designer.cs">
+      <DependentUpon>SiteInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SweepInterfaces.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SweepInterfaces.Designer.cs">
+      <DependentUpon>SweepInterfaces.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Turnbars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Turnbars.Designer.cs">
+      <DependentUpon>Turnbars.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MCNWSiteGen.ico" />
+    <Content Include="One.ico" />
+    <None Include="Resources\OK48.png" />
+    <None Include="Resources\cancel48.png" />
+    <None Include="Resources\PressFeatures.ico" />
+    <None Include="Resources\dfrgres_dll_Ico17_ico_Ico1.ico" />
+    <None Include="Resources\cabview_dll_Ico4_ico_Ico1.ico" />
+    <None Include="Resources\AutoScanCal.ico" />
+    <Content Include="Resources\dropdownarrow.bmp" />
+    <None Include="Resources\ServerOptions.png" />
+    <None Include="Resources\Mercury-AVT-Logo.png" />
+    <None Include="Resources\GUIOptions.bmp" />
+    <None Include="Resources\gmiLogo.bmp" />
+    <Content Include="Two.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
